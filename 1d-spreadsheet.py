@@ -108,7 +108,7 @@ def input():
     return next(input_data)
 
 def sim_input():
-    with (open("test11.txt", "r")) as f:
+    with (open("1d-spreadsheet-data.txt", "r")) as f:
         rows=f.readlines()
     for row in rows:
         yield row.rstrip()
@@ -130,7 +130,7 @@ for _ in range(int(input())):
     cells.append(content)
 
 #as long as there are unresolved references, go through the sheet, and try to replace them with correct value
-while len(list(filter(lambda c: "$" in c,cells))):
+while any(map(lambda c: "$" in c,cells)):
     #parse for unresolved references
     for i in [ i for i,cell in enumerate(cells) if "$" in cell]:
         op,arg1,arg2=cells[i].split()
@@ -142,10 +142,7 @@ while len(list(filter(lambda c: "$" in c,cells))):
             ref=int(arg2[1:])
             refval=cells[ref]
             arg2 = refval if "$" not in refval else arg2
-        cells[i]=f"{op} {arg1} {arg2}"
-        if "$" not in cells[i]:
-            op,arg1,arg2=cells[i].split()
-            cells[i]=f"{OP[op](int(arg1),int(arg2))}"
+        cells[i]=f"{op} {arg1} {arg2}" if "$" in arg1+arg2 else f"{OP[op](int(arg1),int(arg2))}"
 
 for c,e in zip(cells,expected):
     print(c==e, c,e)

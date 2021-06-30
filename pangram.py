@@ -6,6 +6,7 @@
 # r=" ".join([c for c in string.ascii_lowercase if c not in w])
 # print((r,"Pangram")[len(r)<1])
 
-import string
-r = " ".join(sorted(set(string.ascii_lowercase) - set(input())))
+#116
+import string as s
+r = " ".join(sorted(set(s.ascii_lowercase) - set(input())))
 print((r, "Pangram")[len(r) < 1])

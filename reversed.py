@@ -10,7 +10,7 @@
 #21
 #1
 
-#123 characters
+#120 characters
 p=lambda *r:"".join(map(str,range(*r)))
 l=1
 for n in range(int(input()),0,-1):print((p(n,0,-1),p(1,n+1,1))[l%2!=0]);l+=1

@@ -11,5 +11,5 @@
 #print(sum(15==sum(c[k]for k in range(5)if(1<<k)&i)for i in range(32)))
 
 import itertools as t
-b=[int(input()) for _ in "12345"]
+b=[int(s)for s in open(0)]
 print(sum([sum(x)==15 for i in range(6)for x in t.combinations(b,i)]))

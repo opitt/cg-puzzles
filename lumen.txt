@@ -1,10 +1,32 @@
-5
-3
-C X X X C
-X X X X X
-X X X X X
-X X X X X
-C X X X C
+25
+2
+X X C C C C X X X X C C X X X C X X X X X C X X X
+C X X X X X X X X X X X X X X C X X X X X X X X X
+X X X X X X X X X X X X C X X X X C X X X C C X X
+C X X X X C X X X X X X X X X X X X X C X X X X X
+X X C X C X X X X X X X X X C X X C X X X C X X X
+X X X X X C X X X X X X X C X C X X X X X X X X X
+C X X X X C C X X X X X X X X X C X X X X X X C X
+C X C C X X C X X C X X C C X X C X X X X X X X X
+X X X X X X X X X X X X X X X X X C X X X X X C X
+X C X X X X X X X X X X X X X X X X X C C X X X X
+C X X X X X X C X C X X X X C X X X X X C X X X X
+X C X X C X X X X X X X X X C X X X X X C X X X C
+X X X X X X X X X C X X C X X X X X X X X X C X X
+X X C X C X X X X X C X X X X X X C C X X X C X C
+C X C C X X X X X X X X X X C X X X X X C X X X X
+C X X C X C X X C C X X X C C X X X X X X X C C X
+C X X X X X X X X X X X X X X X X X X C X X X X X
+X X X X X X X C X X X X X X C X X X X X X X C X X
+X C X C X X C X X X X X C X X X X X X X C C X C X
+X X X C X X C C C X X C X X X X X C X X X X X X X
+X C X X X X X X X X X X X C X X X X X X X X X X X
+X X X C C X X C X C X X X X X X X X X C C X X X X
+X X C X X X X C X C C X X X X X C X X X X C C X X
+X X X X C X X X X X C X X X X X C X X X C X X C X
+X X X C X X C X X X X X X X X X X X C X X X X X X
+=90
+
 6
 3
 X X X X X X
@@ -13,3 +35,13 @@ X X X X X X
 X X X C X X
 X X X X X X
 X X X X X X
+=4
+
+5
+3
+C X X X C
+X X X X X
+X X X X X
+X X X X X
+C X X X C
+=0

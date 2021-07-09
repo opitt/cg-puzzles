@@ -48,32 +48,28 @@ Constraints
 width = int(input())
 initial_power = int(input())
 room = []
-candles = []
 for room_y in range(width):
     line=input()
     room.append([(0,initial_power)[c=="C"] for c in line.split()])
-    room_x=-1
-    for _ in range(room[-1].count(initial_power)):
-        room_x = room[-1].index(initial_power,room_x+1)
-        candles.append((room_y, room_x))
 
 def spread_light(candle_y,candle_x):
-    power=initial_power-1
-    distance=1
+    power=initial_power
+    distance=0
     while power:
+        power-=1
+        distance+=1
         for dist_y in range(-distance,distance+1):
             for dist_x in range(-distance,distance+1):
                 room_x,room_y=candle_x+dist_x,candle_y+dist_y
                 if 0<=room_x<width and 0<=room_y<width and room[room_y][room_x]<power:
                     room[room_y][room_x]=power
-        power-=1
-        distance+=1
 
-for y, x in candles:
-    spread_light(y,x)
+for room_y,line in enumerate(room):
+    room_x=-1
+    for _ in range(line.count(initial_power)):
+        room_x = line.index(initial_power,room_x+1)
+        spread_light(room_y, room_x)
 
 dark_spots=sum([l.count(0) for l in room])
 print(dark_spots)
 
-#for l in room:
-#    print(l)

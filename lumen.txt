@@ -1,0 +1,15 @@
+5
+3
+C X X X C
+X X X X X
+X X X X X
+X X X X X
+C X X X C
+6
+3
+X X X X X X
+X C X X X X
+X X X X X X
+X X X C X X
+X X X X X X
+X X X X X X

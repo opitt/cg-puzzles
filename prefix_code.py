@@ -45,7 +45,7 @@ s = input()
 
 res = ""
 idx = 0
-found = True
+found = len(code)>0
 while found and len(s):
     for b in code.keys():
         found = s.startswith(b)

@@ -1,14 +1,16 @@
 def input():
     return next(input_data)
 
+
 def sim_input():
     with (open("prefix_code.txt", "r")) as f:
         rows = f.readlines()
     for row in rows:
         yield row.rstrip()
 
+
 input_data = sim_input()
-#above his line is input simulation code
+# above his line is input simulation code
 """
 Given a fixed set of characters, a code is a table that gives the encoding to use for each character.
 
@@ -38,21 +40,20 @@ Output
 - Otherwise print the decoded string.
 """
 n = int(input())
-code={b:chr(int(c)) for b,c in [input().split() for _ in range(n)]}
+code = {b: chr(int(c)) for b, c in [input().split() for _ in range(n)]}
 s = input()
 
-res=""
-idx=0
-found=True
+res = ""
+idx = 0
+found = True
 while found and len(s):
-    for l in range(1,len(s)+1):
-        c=code.get(s[:l],"")
-        found=c!=""
+    for b in code.keys():
+        found = s.startswith(b)
         if found:
-            res+=c
-            s=s[l:]
-            idx+=l
-            break    
+            res += code[b]
+            s = s[len(b):]
+            idx += len(b)
+            break
 
 if not found:
     print(f"DECODE FAIL AT INDEX {idx}")

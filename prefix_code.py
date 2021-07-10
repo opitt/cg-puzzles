@@ -40,7 +40,8 @@ Output
 - Otherwise print the decoded string.
 """
 n = int(input())
-code = {b: chr(int(c)) for b, c in [input().split() for _ in range(n)]}
+code = {b:chr(int(c)) for b, c in [input().split() for _ in range(n)]}
+#code = {b:chr(int(c)) for _ in range(n) for b, c in [input().split()]} 
 s = input()
 
 res = ""
